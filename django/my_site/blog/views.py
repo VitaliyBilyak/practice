@@ -27,10 +27,11 @@ all_posts=[
         "title": "Our new family: Two Dobermans!",
         "excerpt":"We are happy to share the great news - we have bought two Dobermans! One boy and one girl have already become favorites in our family.",
         "content": """ 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nobis aperiam est praesentium, quos iste consequuntur omnis exercitationem quam velit labore vero culpa ad mollitia? Quis architecto ipsam nemo. Odio.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nobis aperiam est praesentium, quos iste consequuntur omnis exercitationem quam velit labore vero culpa ad mollitia? Quis architecto ipsam nemo. Odio.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nobis aperiam est praesentium, quos iste consequuntur omnis exercitationem quam velit labore vero culpa ad mollitia? Quis architecto ipsam nemo. Odio.
-
+            We are pleased to share with you the news that our family has been enriched by two wonderful Dobermans!
+            These incredible dogs have already become an integral part of our lives, and we want to tell you why Dobermans have become our choice and how they affect our everyday life.
+           
+            Features of our new family!!!
+            Our Dobermans have already proved to be excellent guards, always alert to their surroundings and ready to protect their family. However, they are also very affectionate and gentle, especially with children. Their playfulness makes every day bright and fun. We actively work with them, giving them the opportunity to release their energy and teach them new tricks.  
         """,
     },
     {

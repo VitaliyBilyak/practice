@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title%}
+   {{ title }}
+{% endblock %}
+
+{% block content%}
+<style>
+   body {
+       font-family: Arial, sans-serif;
+       background-color: #f4f4f4;
+       color: #333;
+       margin: 0;
+       padding: 20px;
+   }
+   h1 {
+       color: #4CAF50;
+       font-size: 2.5em;
+       border-bottom: 2px solid #4CAF50;
+       padding-bottom: 10px;
+       margin-bottom: 20px;
+   }
+   h2 {
+       color: #555;
+       font-size: 1.5em;
+       margin-bottom: 15px;
+   }
+   p {
+       font-size: 1.2em;
+       line-height: 1.6;
+   }
+   ul {
+       list-style-type: none;
+       padding-left: 0;
+   }
+   li {
+       background-color: #e7f3e7;
+       padding: 10px;
+       margin: 5px 0;
+       border-left: 5px solid #4CAF50;
+       border-radius: 3px;
+   }
+   .bestseller {
+       color: #FF5722;
+       font-weight: bold;
+   }
+   .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 16px; /* Трохи більше відступу для зручності */
+      background-color: #E0FFFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px; /* Заокруглені кути для більш м'якого вигляду */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Плавний перехід для кольору фону і натискання */
+      font-size: 0.85em; /* Зменшений розмір шрифту */
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Додає тінь для більш об'ємного вигляду */
+      cursor: pointer;
+  }
+  
+  .back-button:hover {
+      background-color: #AFEEEE;
+      transform: translateY(-2px); /* Легке підняття кнопки при наведенні */
+  }
+  
+  .back-button:active {
+      background-color: #5F9EA0; /* Трохи темніший відтінок при натисканні */
+      transform: translateY(0); /* Зменшує підняття при натисканні */
+  }
+</style>
+<p class=back-button><a href="{% url "home" %}">back </a></p>
+   <h1>{{title}}</h1>
+   <h2>{{author}}</h2>
+   <p>The book has a rating of {{rating}}
+    
+    {%if is_bestseller%}
+     and is a bestseller
+    {% else %}
+     but isn't a bestseller
+    {% endif %}
+
+</p>
+<h3>Published in the following countries:</h3>
+<ul>
+    {% for country in published_countries %}
+        <li>{{ country.name }}</li>
+    {% empty %}
+        <li>This book hasn't been published in any country yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
